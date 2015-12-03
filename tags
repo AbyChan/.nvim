@@ -1,0 +1,48 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+//	/home/tyan/.config/nvim/init.vim	/^vnoremap \/\/ y\/<C-R>"<CR>$/;"	m	language:Vim
+;	/home/tyan/.config/nvim/init.vim	/^nnoremap ; :$/;"	m	language:Vim
+<C-J>	/home/tyan/.config/nvim/init.vim	/^map <C-J> <C-W>j<C-W>_$/;"	m	language:Vim
+<C-K>	/home/tyan/.config/nvim/init.vim	/^map <C-K> <C-W>k<C-W>_$/;"	m	language:Vim
+<c-o>	/home/tyan/.config/nvim/init.vim	/^nnoremap <c-o> <c-o>zz$/;"	m	language:Vim
+<C-t>	/home/tyan/.config/nvim/init.vim	/^inoremap <C-t>     <Esc>:tabnew<CR>$/;"	m	language:Vim
+<C-t>	/home/tyan/.config/nvim/init.vim	/^nnoremap <C-t>     :tabnew<CR>$/;"	m	language:Vim
+<down>	/home/tyan/.config/nvim/init.vim	/^imap <down> <nop>$/;"	m	language:Vim
+<down>	/home/tyan/.config/nvim/init.vim	/^map <down> <nop>$/;"	m	language:Vim
+<F8>	/home/tyan/.config/nvim/init.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m	language:Vim
+<left>	/home/tyan/.config/nvim/init.vim	/^imap <left> <nop>$/;"	m	language:Vim
+<left>	/home/tyan/.config/nvim/init.vim	/^map <left> <nop>$/;"	m	language:Vim
+<right>	/home/tyan/.config/nvim/init.vim	/^imap <right> <nop>$/;"	m	language:Vim
+<right>	/home/tyan/.config/nvim/init.vim	/^map <right> <nop>$/;"	m	language:Vim
+<tab>	/home/tyan/.config/nvim/init.vim	/^nnoremap <tab> %$/;"	m	language:Vim
+<tab>	/home/tyan/.config/nvim/init.vim	/^vnoremap <tab> %$/;"	m	language:Vim
+<up>	/home/tyan/.config/nvim/init.vim	/^imap <up> <nop>$/;"	m	language:Vim
+<up>	/home/tyan/.config/nvim/init.vim	/^map <up> <nop>$/;"	m	language:Vim
+BuildYCM	/home/tyan/.config/nvim/init.vim	/^function! BuildYCM(info)$/;"	f	language:Vim
+g,	/home/tyan/.config/nvim/init.vim	/^nnoremap g, g,zz$/;"	m	language:Vim
+g:EasyMotion_do_mapping	/home/tyan/.config/nvim/init.vim	/^let g:EasyMotion_do_mapping = 0 " Disable default mappings$/;"	v	language:Vim
+g:easytags_always_enabled	/home/tyan/.config/nvim/init.vim	/^let g:easytags_always_enabled = 1$/;"	v	language:Vim
+g:easytags_auto_highlight	/home/tyan/.config/nvim/init.vim	/^let g:easytags_auto_highlight = 1$/;"	v	language:Vim
+g:easytags_dynamic_files	/home/tyan/.config/nvim/init.vim	/^let g:easytags_dynamic_files = 1$/;"	v	language:Vim
+g:easytags_file	/home/tyan/.config/nvim/init.vim	/^let g:easytags_file = '.\/tags'$/;"	v	language:Vim
+g:easytags_updatetime_min	/home/tyan/.config/nvim/init.vim	/^let g:easytags_updatetime_min = 5000$/;"	v	language:Vim
+g:multi_cursor_next_key	/home/tyan/.config/nvim/init.vim	/^let g:multi_cursor_next_key='<C-n>'$/;"	v	language:Vim
+g:multi_cursor_prev_key	/home/tyan/.config/nvim/init.vim	/^let g:multi_cursor_prev_key='<C-p>'$/;"	v	language:Vim
+g:multi_cursor_quit_key	/home/tyan/.config/nvim/init.vim	/^let g:multi_cursor_quit_key='<Esc>'$/;"	v	language:Vim
+g:multi_cursor_skip_key	/home/tyan/.config/nvim/init.vim	/^let g:multi_cursor_skip_key='<C-x>'$/;"	v	language:Vim
+g:multi_cursor_use_default_mapping	/home/tyan/.config/nvim/init.vim	/^let g:multi_cursor_use_default_mapping=0$/;"	v	language:Vim
+g:snips_trigger_key	/home/tyan/.config/nvim/init.vim	/^let g:snips_trigger_key = '<C-\\>'$/;"	v	language:Vim
+g:startify_custom_header	/home/tyan/.config/nvim/init.vim	/^let g:startify_custom_header =$/;"	v	language:Vim
+g:syntastic_error_symbol	/home/tyan/.config/nvim/init.vim	/^let g:syntastic_error_symbol='✗'$/;"	v	language:Vim
+g:syntastic_javascript_checkers	/home/tyan/.config/nvim/init.vim	/^let g:syntastic_javascript_checkers = ['jshint']$/;"	v	language:Vim
+g:syntastic_warning_symbol	/home/tyan/.config/nvim/init.vim	/^let g:syntastic_warning_symbol='⚠'$/;"	v	language:Vim
+g:tagbar_type_javascript	/home/tyan/.config/nvim/init.vim	/^let g:tagbar_type_javascript = {$/;"	v	language:Vim
+g:ycm_key_list_previous_completion	/home/tyan/.config/nvim/init.vim	/^let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']$/;"	v	language:Vim
+g:ycm_key_list_select_completion	/home/tyan/.config/nvim/init.vim	/^let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']$/;"	v	language:Vim
+g;	/home/tyan/.config/nvim/init.vim	/^nnoremap g; g;zz$/;"	m	language:Vim
+j	/home/tyan/.config/nvim/init.vim	/^nnoremap j gj$/;"	m	language:Vim
+jj	/home/tyan/.config/nvim/init.vim	/^imap jj <Esc>$/;"	m	language:Vim
+k	/home/tyan/.config/nvim/init.vim	/^nnoremap k gk$/;"	m	language:Vim
+mapleader	/home/tyan/.config/nvim/init.vim	/^let mapleader=","$/;"	v	language:Vim
+n	/home/tyan/.config/nvim/init.vim	/^nnoremap n nzzzv$/;"	m	language:Vim
+N	/home/tyan/.config/nvim/init.vim	/^nnoremap N Nzzzv$/;"	m	language:Vim
+s	/home/tyan/.config/nvim/init.vim	/^nmap s <Plug>(easymotion-s)$/;"	m	language:Vim
