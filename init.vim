@@ -131,6 +131,8 @@ set laststatus=2
 set undofile
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
+set ai "Auto indent"
+set si "Smart indent"
 
 "move
 nnoremap j gj
@@ -216,3 +218,6 @@ endif
 :nnoremap <A-j> <C-w>j
 :nnoremap <A-k> <C-w>k
 :nnoremap <A-l> <C-w>l
+
+:nnoremap <C-h> <C-w>h
+:nnoremap <C-l> <C-w>l
