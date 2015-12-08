@@ -51,36 +51,37 @@ Plug 'pangloss/vim-javascript'
 Plug 'marijnh/tern_for_vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'isRuslan/vim-es6'
+plug 'jiangmiao/simple-javascript-indenter'
 
 " tool
-Plug 'majutsushi/tagbar'
-Plug 'jiangmiao/auto-pairs'
-Plug 'xolox/vim-easytags'
-Plug 'tpope/vim-commentary'
+plug 'majutsushi/tagbar'
+plug 'jiangmiao/auto-pairs'
+plug 'xolox/vim-easytags'
+plug 'tpope/vim-commentary'
 
 " misc
-Plug 'xolox/vim-misc'
-Plug 'plasticboy/vim-markdown'
-Plug 'easymotion/vim-easymotion'
-Plug 'mhinz/vim-startify'
-Plug 'bling/vim-airline'
-Plug 'edkolev/promptline.vim'
-Plug 'scrooloose/syntastic'
-Plug 'terryma/vim-expand-region'
-Plug 'tpope/vim-surround'
-Plug 'DataWraith/auto_mkdir'
-Plug 'edsono/vim-matchit' "extended % matching for HTML
-Plug 'kien/ctrlp.vim'
-Plug 'nelstrom/vimprint'
+plug 'xolox/vim-misc'
+plug 'plasticboy/vim-markdown'
+plug 'easymotion/vim-easymotion'
+plug 'mhinz/vim-startify'
+plug 'bling/vim-airline'
+plug 'edkolev/promptline.vim'
+plug 'scrooloose/syntastic'
+plug 'terryma/vim-expand-region'
+plug 'tpope/vim-surround'
+plug 'datawraith/auto_mkdir'
+plug 'edsono/vim-matchit' "extended % matching for HTML
+plug 'kien/ctrlp.vim'
+plug 'nelstrom/vimprint'
 
 " color
-Plug 'altercation/vim-colors-solarized'
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'w0ng/vim-hybrid'
+plug 'altercation/vim-colors-solarized'
+plug 'chriskempson/vim-tomorrow-theme'
+plug 'w0ng/vim-hybrid'
 
-" Indent guides ----------------------------------------------------------
+" indent guides ----------------------------------------------------------
 
-" Add plugins to &runtimepath
+" add plugins to &runtimepath
 call plug#end()
 
 map <up> <nop>
@@ -93,21 +94,21 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap s <Plug>(easymotion-s)
+let g:easymotion_do_mapping = 0 " disable default mappings
+nmap s <plug>(easymotion-s)
 
 set background=dark
-set t_Co=256
+set t_co=256
 colorscheme hybrid
 
 let mapleader=","
 
-" Nav windows 
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
+" nav windows 
+map <c-j> <c-w>j<c-w>_
+map <c-k> <c-w>k<c-w>_
 set wmh=0
 
-nmap <F8> :TagbarToggle<CR>
+nmap <f8> :tagbartoggle<cr>
 
 set regexpengine=1
 syntax enable
@@ -131,30 +132,33 @@ set laststatus=2
 set undofile
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
-set ai "Auto indent"
-set si "Smart indent"
+set ai "auto indent"
+set si "smart indent"
+set tabstop=2 
+set softtabstop=2 
+set shiftwidth=2 
 
 "move
 nnoremap j gj
 nnoremap k gk
 nnoremap ; :
 
-" Use tab instead of % for moving between brackets
+" use tab instead of % for moving between brackets
 nnoremap <tab> %
 vnoremap <tab> %
 
-vnoremap // y/<C-R>"<CR>
+vnoremap // y/<c-r>"<cr>
 
-" Keep search matches in the middle of the window.
+" keep search matches in the middle of the window.
 nnoremap n nzzzv
-nnoremap N Nzzzv
+nnoremap n nzzzv
 
-" Same when jumping around
+" same when jumping around
 nnoremap g; g;zz
 nnoremap g, g,zz
 nnoremap <c-o> <c-o>zz
 
-" Abbreviations --------------------------------------------
+" abbreviations --------------------------------------------
 ab teh the
 ab hte the
 ab taht that
@@ -162,10 +166,10 @@ ab waht what
 
 
 " -----quick escape
-imap jj <Esc>
+imap jj <esc>
 
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <c-t>     :tabnew<cr>
+inoremap <c-t>     <esc>:tabnew<cr>
 
 
 let g:startify_custom_header =
@@ -174,10 +178,10 @@ let g:startify_custom_header =
 
 "vim-multiple-cursors
 let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_next_key='<c-n>'
+let g:multi_cursor_prev_key='<c-p>'
+let g:multi_cursor_skip_key='<c-x>'
+let g:multi_cursor_quit_key='<esc>'
 
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/local/bin/jsctags'
@@ -188,7 +192,7 @@ let g:tagbar_type_javascript = {
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 
-" EasyTags
+" easytags
 set tags=./tags;
 set tags=./tags;
 let g:easytags_always_enabled = 1
@@ -199,25 +203,36 @@ let g:easytags_updatetime_min = 5000
 
 let g:syntastic_javascript_checkers = ['jshint']
 
-let g:snips_trigger_key = '<C-\>'
+let g:snips_trigger_key = '<c-\>'
 
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 
 " remember last position in last session
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  au bufreadpost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-:tnoremap <Esc> <C-\><C-n>
-:tnoremap <A-h> <C-\><C-n><C-w>h
-:tnoremap <A-j> <C-\><C-n><C-w>j
-:tnoremap <A-k> <C-\><C-n><C-w>k
-:tnoremap <A-l> <C-\><C-n><C-w>l
-:nnoremap <A-h> <C-w>h
-:nnoremap <A-j> <C-w>j
-:nnoremap <A-k> <C-w>k
-:nnoremap <A-l> <C-w>l
+:tnoremap <esc> <c-\><c-n>
+:tnoremap <a-h> <c-\><c-n><c-w>h
+:tnoremap <a-j> <c-\><c-n><c-w>j
+:tnoremap <a-k> <c-\><c-n><c-w>k
+:tnoremap <a-l> <c-\><c-n><c-w>l
+:nnoremap <a-h> <c-w>h
+:nnoremap <a-j> <c-w>j
+:nnoremap <a-k> <c-w>k
+:nnoremap <a-l> <c-w>l
 
-:nnoremap <C-h> <C-w>h
-:nnoremap <C-l> <C-w>l
+:nnoremap <c-h> <c-w>h
+:nnoremap <c-l> <c-w>l
+
+
+autocmd FileType javascript noremap <buffer> <f2> :terndef<cr>
+autocmd FileType javascript noremap <buffer> <F3> :TernRename<CR>
+autocmd FileType javascript noremap <buffer> <F4> :TernDefPreview<CR>
+
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType json noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType scss noremap <buffer> <c-f> :call CSSBeautify()<cr>
