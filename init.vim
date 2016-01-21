@@ -81,6 +81,7 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'w0ng/vim-hybrid'
 
 Plug 'wakatime/vim-wakatime'
+Plug 'jaxbot/semantic-highlight.vim'
 " Indent guides ----------------------------------------------------------
 
 " Add plugins to &runtimepath
@@ -234,11 +235,11 @@ autocmd FileType javascript noremap <buffer> <F2> :TernDef<CR>
 autocmd FileType javascript noremap <buffer> <F3> :TernRename<CR>
 autocmd FileType javascript noremap <buffer> <F4> :TernRefs<CR>
 
-autocmd FileType javascript noremap <buffer>  <C-F> :call JsBeautify()<cr>
-autocmd FileType json noremap <buffer>  <C-F> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <C-F> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <C-F> :call CSSBeautify()<cr>
-autocmd FileType scss noremap <buffer> <C-F> :call CSSBeautify()<cr>
+" autocmd FileType javascript noremap <buffer>  <C-F> :call JsBeautify()<cr>
+" autocmd FileType json noremap <buffer>  <C-F> :call JsBeautify()<cr>
+" autocmd FileType html noremap <buffer> <C-F> :call HtmlBeautify()<cr>
+" autocmd FileType css noremap <buffer> <C-F> :call CSSBeautify()<cr>
+" autocmd FileType scss noremap <buffer> <C-F> :call CSSBeautify()<cr>
 
 let g:javascript_conceal_function   = "ƒ"
 let g:javascript_conceal_null       = "ø"
@@ -251,3 +252,5 @@ let g:javascript_conceal_static     = "•"
 let g:javascript_conceal_super      = "Ω"
 
 :nnoremap <C-p> :CtrlPBuffer<CR>
+
+g:SimpleJsIndenter_BriefMode = 1
