@@ -80,20 +80,21 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'w0ng/vim-hybrid'
 
+Plug 'wakatime/vim-wakatime'
 " Indent guides ----------------------------------------------------------
 
 " Add plugins to &runtimepath
 call plug#end()
 
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+" map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
 
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+" imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap s <Plug>(easymotion-s)
@@ -170,7 +171,6 @@ ab waht what
 imap jj <Esc>
 
 nnoremap <C-t>     :tabnew<CR>
-inoremap <C-t>     <Esc>:tabnew<CR>
 
 
 let g:startify_custom_header =
@@ -224,19 +224,21 @@ endif
 :nnoremap <A-k> <C-w>k
 :nnoremap <A-l> <C-w>l
 
-:nnoremap <C-h> <C-w>h
-:nnoremap <C-l> <C-w>l
+" :nnoremap <C-h> <C-w>h
+" :nnoremap <C-l> <C-w>l
+
+:nnoremap <C-z> :FZF<CR>
 
 
 autocmd FileType javascript noremap <buffer> <F2> :TernDef<CR>
 autocmd FileType javascript noremap <buffer> <F3> :TernRename<CR>
-autocmd FileType javascript noremap <buffer> <F4> :TernDefPreview<CR>
+autocmd FileType javascript noremap <buffer> <F4> :TernRefs<CR>
 
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType json noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-autocmd FileType scss noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType javascript noremap <buffer>  <C-F> :call JsBeautify()<cr>
+autocmd FileType json noremap <buffer>  <C-F> :call JsBeautify()<cr>
+autocmd FileType html noremap <buffer> <C-F> :call HtmlBeautify()<cr>
+autocmd FileType css noremap <buffer> <C-F> :call CSSBeautify()<cr>
+autocmd FileType scss noremap <buffer> <C-F> :call CSSBeautify()<cr>
 
 let g:javascript_conceal_function   = "ƒ"
 let g:javascript_conceal_null       = "ø"
@@ -247,3 +249,5 @@ let g:javascript_conceal_NaN        = "ℕ"
 let g:javascript_conceal_prototype  = "¶"
 let g:javascript_conceal_static     = "•"
 let g:javascript_conceal_super      = "Ω"
+
+:nnoremap <C-p> :CtrlPBuffer<CR>
