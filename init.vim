@@ -253,4 +253,4 @@ let g:javascript_conceal_super      = "Ω"
 
 :nnoremap <C-p> :CtrlPBuffer<CR>
 
-g:SimpleJsIndenter_BriefMode = 1
+let g:SimpleJsIndenter_BriefMode = 1
