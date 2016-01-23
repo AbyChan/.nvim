@@ -52,7 +52,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'marijnh/tern_for_vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'isRuslan/vim-es6'
-Plug 'jiangmiao/simple-javascript-indenter'
 
 " tool
 Plug 'majutsushi/tagbar'
@@ -161,6 +160,10 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 nnoremap <c-o> <c-o>zz
 
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
 " Abbreviations --------------------------------------------
 ab teh the
 ab hte the
@@ -253,4 +256,3 @@ let g:javascript_conceal_super      = "Ω"
 
 :nnoremap <C-p> :CtrlPBuffer<CR>
 
-let g:SimpleJsIndenter_BriefMode = 1
