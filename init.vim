@@ -27,6 +27,7 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+
 function! BuildYCM(info)
   " info is a dictionary with 3 fields
   " - name:   name of the plugin
@@ -253,4 +254,6 @@ let g:javascript_conceal_super      = "Ω"
 
 :nnoremap <C-p> :CtrlPBuffer<CR>
 
-g:SimpleJsIndenter_BriefMode = 1
+let g:SimpleJsIndenter_BriefMode = 1
+
+set clipboard=unnamed
