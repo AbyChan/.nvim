@@ -8,15 +8,18 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 
-" Group dependencies, vim-snippets depends on ultisnips
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using git URL
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
+Plug 'Shougo/neocomplete'
+
+Plug 'Shougo/neosnippet'
+Plug 'A-Horse/neosnippet-snippets'
+Plug 'asins/vim-dict'
 
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -26,6 +29,8 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+Plug 'joeytwiddle/sexy_scroller.vim'
 
 
 function! BuildYCM(info)
@@ -45,6 +50,7 @@ Plug 'mattn/emmet-vim'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'einars/js-beautify'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'mxw/vim-jsx'
 
 Plug 'terryma/vim-multiple-cursors'
@@ -53,7 +59,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'marijnh/tern_for_vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'isRuslan/vim-es6'
-Plug 'jiangmiao/simple-javascript-indenter'
 
 " tool
 Plug 'majutsushi/tagbar'
@@ -162,6 +167,10 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 nnoremap <c-o> <c-o>zz
 
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
 " Abbreviations --------------------------------------------
 ab teh the
 ab hte the
@@ -244,16 +253,39 @@ autocmd FileType javascript noremap <buffer> <F4> :TernRefs<CR>
 
 let g:javascript_conceal_function   = "ƒ"
 let g:javascript_conceal_null       = "ø"
-let g:javascript_conceal_this       = "@"
-let g:javascript_conceal_return     = "⇚"
+let g:javascript_conceal_return     = "➡"
 let g:javascript_conceal_undefined  = "¿"
 let g:javascript_conceal_NaN        = "ℕ"
-let g:javascript_conceal_prototype  = "¶"
 let g:javascript_conceal_static     = "•"
-let g:javascript_conceal_super      = "Ω"
 
 :nnoremap <C-p> :CtrlPBuffer<CR>
 
 let g:SimpleJsIndenter_BriefMode = 1
 
 set clipboard=unnamed
+
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+let g:ycm_semantic_triggers = {
+   \   'css': [ 're!^\s{2}', 're!:\s+' ],
+   \ }
